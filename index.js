@@ -144,9 +144,9 @@ whitespace();
 let intA = 8;
 let intB = 10;
 
-intA >= intB
-  ? console.log("A greater than B")
-  : console.log("B Greater than A");
+intA >= intB ?
+  console.log("A greater than B") :
+  console.log("B Greater than A");
 whitespace();
 
 // Level 11
@@ -174,18 +174,41 @@ console.log("Random number: ", rand);
  */
 
 function calc(x, y, operator) {
-  this.add = function() {
+  this.add = function () {
     return x + y;
   };
-  this.substract = function() {
+
+  this.substract = function () {
     return x - y;
   };
 
-  if (operator == "add") {
-    this.add();
-  } else {
-    this.substract();
+  this.multiply = function () {
+    return x * y;
   }
+
+  this.devide = function () {
+    return x / y;
+  }
+
+  this.modulo = function () {
+    return x % y;
+  }
+
+  let value = 0
+  if (operator == "add") {
+    value = this.add();
+  } else if (operator == "subtract") {
+    value = this.substract();
+  } else if (operator == "multiply") {
+    value = this.multiply()
+  } else if (operator == "devide") {
+    value = this.devide()
+  } else if (operator == "modulo") {
+    value = this.modulo()
+  } else {
+    return "Doesnt know the input!"
+  }
+  return value
 }
 
-console.log(calc(6, 4, "add"));
+console.log(calc(6, 4, "multiply"));
