@@ -217,17 +217,16 @@ whitespace();
 
 // Level 16
 
-var x = 10;
-var y = 20;
+// var x = 10;
+// var y = 20;
 
-function tesA(x, y) {
-  return x + y;
-}
+// function tesA(x, y) {
+//   return x + y;
+// }
 
-function tesB(x, y) {
-  return x - y;
-}
-
+// function tesB(x, y) {
+//   return x - y;
+// }
 
 // function combine(val1, val2) {
 //   return val1 * val2;
