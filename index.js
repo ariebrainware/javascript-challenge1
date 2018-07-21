@@ -119,8 +119,8 @@ if (phi >= r) {
 }
 whitespace();
 
-// Level 9
-
+// Level 9 temporary removed because for debugging purpose
+//
 // let A = prompt("Input first number: ", "0");
 // let B = prompt("Input second number: ", "0");
 // const numA = parseInt(A);
@@ -144,9 +144,9 @@ whitespace();
 let intA = 8;
 let intB = 10;
 
-intA >= intB ?
-  console.log("A greater than B") :
-  console.log("B Greater than A");
+intA >= intB
+  ? console.log("A greater than B")
+  : console.log("B Greater than A");
 whitespace();
 
 // Level 11
@@ -167,6 +167,7 @@ console.log(mathRect(3, 4));
 
 let rand = Math.random();
 console.log("Random number: ", rand);
+whitespace()
 
 /**
  * Calculator Math
@@ -174,41 +175,61 @@ console.log("Random number: ", rand);
  */
 
 function calc(x, y, operator) {
-  this.add = function () {
+  this.add = function() {
     return x + y;
   };
 
-  this.substract = function () {
+  this.substract = function() {
     return x - y;
   };
 
-  this.multiply = function () {
+  this.multiply = function() {
     return x * y;
-  }
+  };
 
-  this.devide = function () {
+  this.devide = function() {
     return x / y;
-  }
+  };
 
-  this.modulo = function () {
+  this.modulo = function() {
     return x % y;
-  }
+  };
 
-  let value = 0
+  let value = 0;
   if (operator == "add") {
     value = this.add();
   } else if (operator == "subtract") {
     value = this.substract();
   } else if (operator == "multiply") {
-    value = this.multiply()
+    value = this.multiply();
   } else if (operator == "devide") {
-    value = this.devide()
+    value = this.devide();
   } else if (operator == "modulo") {
-    value = this.modulo()
+    value = this.modulo();
   } else {
-    return "Doesnt know the input!"
+    return "Doesnt know the input!";
   }
-  return value
+  return value;
 }
 
 console.log(calc(6, 4, "multiply"));
+whitespace();
+
+// Level 16
+
+var x = 10;
+var y = 20;
+
+function tesA(x, y) {
+  return x + y;
+}
+
+function tesB(x, y) {
+  return x - y;
+}
+
+
+// function combine(val1, val2) {
+//   return val1 * val2;
+// }
+// console.log(combine());
