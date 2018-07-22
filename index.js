@@ -237,11 +237,11 @@ function combine(x, y) {
 }
 
 console.log(combine(h, i));
-whitespace()
+whitespace();
 /**
  * Calculator: Shape
  * Level 17-18
-*/
+ */
 
 function square(x, y, operation) {
   this.calculateSquareArea = function() {
@@ -264,8 +264,8 @@ function square(x, y, operation) {
 }
 
 function circle(r, operation) {
-  const phi = 3.14
-  this.calculateCircleArea = function(r) {
+  const phi = 3.14;
+  this.calculateCircleArea = function() {
     return phi * Math.pow(r, 2);
   };
 
@@ -302,13 +302,13 @@ function cube(x, operation) {
 }
 
 function tube(r, t, operation) {
-  const phi = 3.14
+  const phi = 3.14;
   this.calculateTubeArea = function() {
     return 2 * phi * Math.pow(r, 2) + phi * r * 2 * t;
   };
 
   this.calculateTubeVolume = function() {
-    return phi * Math.pow(r,2) * t
+    return phi * Math.pow(r, 2) * t;
   };
 
   let value = 0;
@@ -322,4 +322,23 @@ function tube(r, t, operation) {
   return value;
 }
 
-console.log(cube(12,"calculateCubeArea"))
+console.log(cube(12, "calculateCubeArea"));
+whitespace()
+
+// Level 19
+
+var val1 = 20
+var val2 = 2
+var val3 = 10
+var val4 = 3
+var res = square(addition(val1,val2),addition(val3,val4),"calculateSquareArea")
+console.log(res)
+
+function calculateTubeVolumeWithCircle(x,t){
+  return x * t
+}
+var rC = 7
+var resCircleArea = circle(rC,"calculateCircleArea")
+
+
+console.log(calculateTubeVolumeWithCircle(resCircleArea,28))
