@@ -167,7 +167,7 @@ console.log(mathRect(3, 4));
 
 let rand = Math.random();
 console.log("Random number: ", rand);
-whitespace()
+whitespace();
 
 /**
  * Calculator Math
@@ -198,7 +198,7 @@ function calc(x, y, operator) {
   let value = 0;
   if (operator == "add") {
     value = this.add();
-  } else if (operator == "subtract") {
+  } else if (operator == "substract") {
     value = this.substract();
   } else if (operator == "multiply") {
     value = this.multiply();
@@ -207,7 +207,7 @@ function calc(x, y, operator) {
   } else if (operator == "modulo") {
     value = this.modulo();
   } else {
-    return "Doesnt know the input!";
+    return "Doesnt recognize the input!";
   }
   return value;
 }
@@ -217,18 +217,109 @@ whitespace();
 
 // Level 16
 
-// var x = 10;
-// var y = 20;
+var d = 10;
+var e = 2;
+var f = 3;
+var g = 4;
 
-// function tesA(x, y) {
-//   return x + y;
-// }
+function addition(x, y) {
+  return x + y;
+}
 
-// function tesB(x, y) {
-//   return x - y;
-// }
+function substraction(x, y) {
+  return x - y;
+}
+var h = addition(10, 2);
+var i = substraction(7, 4);
 
-// function combine(val1, val2) {
-//   return val1 * val2;
-// }
-// console.log(combine());
+function combine(x, y) {
+  return x + " " + y;
+}
+
+console.log(combine(h, i));
+whitespace()
+/**
+ * Calculator: Shape
+ * Level 17-18
+*/
+
+function square(x, y, operation) {
+  this.calculateSquareArea = function() {
+    return x * y;
+  };
+
+  this.calculateSquarePerimeter = function() {
+    return 4 * x;
+  };
+
+  let value = 0;
+  if (operation == "calculateSquareArea") {
+    value = this.calculateSquareArea();
+  } else if (operation == "calculateSquarePerimeter") {
+    value = this.calculateSquarePerimeter();
+  } else {
+    return "Doesnt recognize the input!";
+  }
+  return value;
+}
+
+function circle(r, operation) {
+  const phi = 3.14
+  this.calculateCircleArea = function(r) {
+    return phi * Math.pow(r, 2);
+  };
+
+  this.calculateCircleCircumference = function() {
+    return phi * r + r;
+  };
+  let value = 0;
+  if (operation == "calculateCircleArea") {
+    value = this.calculateCircleArea();
+  } else if (operation == "calculateCircleCircumference") {
+    value = this.calculateCircleCircumference();
+  } else {
+    return "Doesnt recognize the input!";
+  }
+  return value;
+}
+
+function cube(x, operation) {
+  this.calculateCubeArea = function() {
+    return 6 * x * x;
+  };
+
+  this.calculateCubeVolume = function() {
+    return Math.pow(r, 3);
+  };
+
+  let value = 0;
+  if (operation == "calculateCubeArea") {
+    value = this.calculateCubeArea();
+  } else if (operation == "calculateCubeVolume") {
+    value = this.calculateCubeVolume();
+  }
+  return value;
+}
+
+function tube(r, t, operation) {
+  const phi = 3.14
+  this.calculateTubeArea = function() {
+    return 2 * phi * Math.pow(r, 2) + phi * r * 2 * t;
+  };
+
+  this.calculateTubeVolume = function() {
+    return phi * Math.pow(r,2) * t
+  };
+
+  let value = 0;
+  if (operation == "calculateTubeArea") {
+    value = this.calculateTubeArea();
+  } else if (operation == "calculateTubeVolume") {
+    value = this.calculateTubeVolume();
+  } else {
+    return "Doenst recognize the input!";
+  }
+  return value;
+}
+
+console.log(cube(12,"calculateCubeArea"))
