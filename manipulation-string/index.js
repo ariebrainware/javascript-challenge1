@@ -12,7 +12,6 @@ whitespace();
 
 // Level 5
 
-console.log(firstname + " " + lastname);
 const fullname = `${firstname} ${lastname}`;
 console.log(fullname);
 whitespace();
@@ -21,13 +20,13 @@ whitespace();
 
 let speak1 = "HELL OF WORLD";
 let speak2 = "hell of old";
-let speak3 = "first sentence must be capitalize";
 console.log(speak1.toLowerCase());
 console.log(speak2.toUpperCase());
 whitespace();
 
 // Level 7
 
+let speak3 = "first sentence must be capitalize";
 function ucfirst(str) {
   var pieces = str.split(" "); // split str to array
   for (var i = 0; i < pieces.length; i++) {

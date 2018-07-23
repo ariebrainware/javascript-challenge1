@@ -13,12 +13,26 @@ a {
 }
 
 
-.list{  
-    vertical-align: center;
+.jsc-list-wrapper{  
+    width:500px;
+    padding: 3%;
     color: green;
+    margin-left:26%;
 }
 
+.jsc-list{
+    justify-content: center;
+}
 li{
-   
+   display: block;
+   cursor: pointer;
     padding: 7px;
+}
+a{
+    display: block;
+    padding: 7px;
+}
+li:hover a:hover{
+    background-color: rgb(67, 160, 39);
+    color: rgb(255, 255, 255);
 }

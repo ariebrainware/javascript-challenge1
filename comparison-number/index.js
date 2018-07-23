@@ -23,16 +23,21 @@ let B = prompt("Input second number: ", "0");
 const numA = parseInt(A);
 const numB = parseInt(B);
 
-if (numA >= numB) {
-  console.log("phi greater than r");
-
-  alert("phi greater than r");
-} else if (numA <= numB) {
-  console.log("r greater than phi");
-  alert("r greater than phi");
-} else {
-  console.error("[ERROR]Invalid input!!");
-  alert("[ERROR]Invalid input!!");
+if (numA > numB) {
+  console.log("First number greater than second number");
+  alert("First number greater than second number");
+} else if (numA < numB) {
+  console.log("First number less than second number");
+  alert("First number less than second number");
+} else if (numA == numB) {
+  console.log("First number equal to second number");
+  alert("First number equal to second number");
+}else if(numA == null || numB == null){
+  console.log("Cannot compare to null value");
+  alert("Cannot compare to null value");
+}else{
+  console.log("Invalid value!");
+  alert("Invalid value!");
 }
 whitespace()
 

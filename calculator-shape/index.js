@@ -91,6 +91,10 @@ var val1 = 20;
 var val2 = 2;
 var val3 = 10;
 var val4 = 3;
+
+var addition = (x,y) => {
+    return x + y
+}
 var res = square(addition(val1, val2),addition(val3, val4),"calculateSquareArea");
 console.log(res);
 

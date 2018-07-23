@@ -40,7 +40,7 @@ let calc = {
   var i = substraction(7, 4);
   
   function combine(x, y) {
-    return x + " " + y;
+    return `${x} ${y}`;
   }
   
   console.log(combine(h, i));
