@@ -173,46 +173,62 @@ whitespace();
  * Calculator Math
  * Level 14-15
  */
+// function calc(x, y, operator) {
+//   this.add = function() {
+//     return x + y;
+//   };
 
-function calc(x, y, operator) {
-  this.add = function() {
+//   this.substract = function() {
+//     return x - y;
+//   };
+
+//   this.multiply = function() {
+//     return x * y;
+//   };
+
+//   this.devide = function() {
+//     return x / y;
+//   };
+
+//   this.modulo = function() {
+//     return x % y;
+//   };
+
+//   let value = 0;
+//   if (operator == "add") {
+//     value = this.add();
+//   } else if (operator == "substract") {
+//     value = this.substract();
+//   } else if (operator == "multiply") {
+//     value = this.multiply();
+//   } else if (operator == "devide") {
+//     value = this.devide();
+//   } else if (operator == "modulo") {
+//     value = this.modulo();
+//   } else {
+//     return "Doesnt recognize the input!";
+//   }
+//   return value;
+// }
+
+let calc = {
+  add: (x, y) => {
     return x + y;
-  };
-
-  this.substract = function() {
+  },
+  substract: (x, y) => {
     return x - y;
-  };
-
-  this.multiply = function() {
+  },
+  multiply: (x, y) => {
     return x * y;
-  };
-
-  this.devide = function() {
+  },
+  devide: (x, y) => {
     return x / y;
-  };
-
-  this.modulo = function() {
+  },
+  modulo: (x, y) => {
     return x % y;
-  };
-
-  let value = 0;
-  if (operator == "add") {
-    value = this.add();
-  } else if (operator == "substract") {
-    value = this.substract();
-  } else if (operator == "multiply") {
-    value = this.multiply();
-  } else if (operator == "devide") {
-    value = this.devide();
-  } else if (operator == "modulo") {
-    value = this.modulo();
-  } else {
-    return "Doesnt recognize the input!";
   }
-  return value;
-}
-
-console.log(calc(6, 4, "multiply"));
+};
+console.log(calc.multiply(13, 2));
 whitespace();
 
 // Level 16
@@ -323,22 +339,87 @@ function tube(r, t, operation) {
 }
 
 console.log(cube(12, "calculateCubeArea"));
-whitespace()
+whitespace();
 
 // Level 19
 
-var val1 = 20
-var val2 = 2
-var val3 = 10
-var val4 = 3
-var res = square(addition(val1,val2),addition(val3,val4),"calculateSquareArea")
-console.log(res)
+var val1 = 20;
+var val2 = 2;
+var val3 = 10;
+var val4 = 3;
+var res = square(
+  addition(val1, val2),
+  addition(val3, val4),
+  "calculateSquareArea"
+);
+console.log(res);
 
-function calculateTubeVolumeWithCircle(x,t){
-  return x * t
+function calculateTubeVolumeWithCircle(x, t) {
+  return x * t;
 }
-var rC = 7
-var resCircleArea = circle(rC,"calculateCircleArea")
+var rC = 7;
+var resCircleArea = circle(rC, "calculateCircleArea");
 
+console.log(calculateTubeVolumeWithCircle(resCircleArea, 28));
 
-console.log(calculateTubeVolumeWithCircle(resCircleArea,28))
+/**
+ * Calculated Time
+ * Level 20-22
+ */
+
+var timeTools = {
+  t: new Date(),
+  checkYear: () => {
+    return t.getFullYear();
+  },
+  checkMonth: () => {
+    return t.getMonth();
+  },
+  checkDay: () => {
+    return t.getDay();
+  },
+  checkHours: () => {
+    return t.getHours();
+  },
+  checkMinutes: () => {
+    return t.getHours();
+  },
+  checkSeconds: () => {
+    return t.getSeconds();
+  },
+  checkMiliseconds: () => {
+    return t.getMilliseconds();
+  },
+  convertHoursToSeconds: x => {
+    return x * 3600;
+  },
+  convertHoursToMinutes: x => {
+    return x * 60;
+  },
+  convertMinutesToHours: x => {
+    return x / 60;
+  },
+  convertMinutesToSeconds: x => {
+    return x * 60;
+  },
+  convertMinutesToMiliseconds: x => {
+    return x * 60000;
+  },
+  convertSecondToHours: x => {
+    return x / 3600;
+  },
+  convertSecondToMinutes: x => {
+    return x / 60;
+  },
+  convertSecondToMiliseconds: x => {
+    return x * 1000;
+  }
+};
+
+// console.log("Get hours: " + t.getHours())
+// console.log("Get minutes: " + t.getMinutes())
+// console.log("Get seconds: " + t.getSeconds())
+// console.log("Get miliseconds: " + t.getMilliseconds())
+// conssole.log()
+
+// Level 23
