@@ -21,13 +21,13 @@
 const firstname = document.getElementById('firstname').value
 const lastname = document.getElementById('lastname').value
 const address = document.getElementById('address').value
-const phoneNumber = document.getElementById('phonenumber').value
+const phoneNumber = document.getElementById('phone-number').value
 const email = document.getElementById('email').value
 const formAdd = document.getElementById('form-add')
 const resultField = document.getElementById('result-field')
 
 
-const save = (firstname,lastname,address,phoneNumber,email) => {
+const save = (firstname, lastname, address, phoneNumber, email) => {
     window.localStorage.setItem('firstname', firstname)
     window.localStorage.setItem('lastname', lastname)
     window.localStorage.setItem('address', address)
@@ -51,6 +51,8 @@ const addToDOM = (x) => {
 <div>Phone Number : ${pNumber}</div>
 <div>Email : ${email}</div>`
 
-    resultField.appendChild(base)
+let div = document.createElement('div');
+div.innerHTML=base
+    resultField.appendChild(div)
 }
 formAdd.addEventListener('submit', addToDOM)
